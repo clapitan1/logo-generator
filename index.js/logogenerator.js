@@ -4,8 +4,8 @@ const svgwrite = require('svgwrite');
 const shapes = ['circle', 'triangle', 'square'];
 
 function generateLogo(text, textColor, shape, shapeColor) {
-    const dwg = svgwrite,drawing(300, 200);
-    dwg.add(dwg.text(text, {x: 150 y: 100, fill: textColor}));
+    const dwg = svgwrite.drawing (300, 200);
+    dwg.add(dwg.text(text, {x: 150, y: 100, fill: textColor}));
     if (shape === 'circle') {
         dwg.add(dwg.circle({ cx: 150, cy: 100, r: 50, fill: shapeColor }));
     } else if (shape === 'triangle') {
