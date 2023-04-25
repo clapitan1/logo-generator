@@ -19,5 +19,9 @@ function generateLogo(text, textColor, shape, shapeColor) {
         dwg.add(dwg.rect({ x: 100, y:50, width: 100, height: 100, fill: shapeColor }));
     }
 
-    
+    const svgData = dwg.toSvg();
+    fs.writeFileSync('logo.svg', svgData);
+    console.log('Generated Logo.svg');
 }
+
+module.exports = { generateLogo, shapes };
